@@ -8,7 +8,8 @@ import (
 )
 
 type root struct {
-	Reports []ReportData `json:"report"`
+	Reports []ReportData    `json:"report"`
+	Log     json.RawMessage `json:"log"` // Capture 'log' field as raw JSON (or ignore it)
 }
 
 type reader struct {
